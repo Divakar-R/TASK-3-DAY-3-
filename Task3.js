@@ -50,6 +50,31 @@ console.log(primeNumbers);
 
 
 //5.Return all the palindromes in an array
+
+const inputArray = ["Rotor","Madam","divakar","civic"];
+const palindromes = inputArray.filter(item =>{
+    const str = item.toLowerCase().replace(/[^a-z0-9]/g);
+    return str==str.split('').reverse().join('');
+});
+console.log(palindromes);
+
 //6.Return median of two sorted arrays of the same size.
+
+const a = [2,3,5,4];
+const b = [3,5,1,2];
+const findmedian = (a,b) => {
+    const mergearray = [...a, ...b].sort((a,b) => a-b);
+    const midvalue =Math.floor (mergearray.length /2);
+    if(mergearray.length % 2==0) {
+        return (mergearray[midvalue-1]+ mergearray[midvalue]) / 2;
+    } else {
+        return mergearray[midvalue];
+    }
+};
+const median = findmedian(a,b);
+console.log(median);
+
+
 //7.Remove duplicates from an array
+
 //8.Rotate an array by k times
