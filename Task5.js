@@ -47,3 +47,9 @@ const primeNumbers = numbers.filter(function(number) {
     return true;
 });
 console.log(primeNumbers);
+
+
+//5.Return all the palindromes in an array
+//6.Return median of two sorted arrays of the same size.
+//7.Remove duplicates from an array
+//8.Rotate an array by k times
