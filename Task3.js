@@ -77,4 +77,29 @@ console.log(median);
 
 //7.Remove duplicates from an array
 
+const array = [1, 1, 2, 3, 4, 4, 5, 6, 6];
+function unique(inputArray) {
+  let dup = [...new Set(inputArray)];
+  console.log(dup);
+}
+unique(array);
+
+
+
 //8.Rotate an array by k times
+
+const array = [1, 2, 3, 4, 5];
+const k = 2;
+const rotatedArray = (function (arr, rotations) {
+  const len = arr.length;
+  const rotated = [];
+  
+  for (let i = 0; i < len; i++) {
+    const newIndex = (i + rotations) % len;
+    rotated[newIndex] = arr[i];
+  }
+  return rotated;
+})(array, k);
+
+console.log(rotatedArray);
+
