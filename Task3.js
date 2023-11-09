@@ -9,12 +9,17 @@ numbers.forEach(function(oddnumber){
     }
 });
 
+
+
 //2.Convert all the strings to title caps in a string array
 
-
-
-
-
+const stringArray = ["maTHs is fuN", "diScoVerEd bY me", "baCk tO bACk sixeS"];
+const titleCapsArray = stringArray.map(function (str) {
+  return str.replace(/\w\S*/g, function (txt) {
+    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+  });
+});
+console.log(titleCapsArray);
 
 
 
